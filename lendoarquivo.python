@@ -1,0 +1,17 @@
+from flask import Flask
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def listar_txt():
+    caminho = os.path.expanduser('~/Desktop')  # Caminho para o Desktop
+    arquivos = [f for f in os.listdir(caminho) if f.endswith('.txt')]  # Arquivos .txt
+
+    if not arquivos:
+        return 'Nenhum arquivo .txt encontrado.'
+
+    return '<br>'.join(arquivos)  # Mostra os nomes dos arquivos, um por linha
+
+if __name__ == '__main__':
+    app.run(debug=True)
