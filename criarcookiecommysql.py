@@ -1,21 +1,3 @@
-create table if not exists cl
-(
-id int primary key auto_increment,
-cookie text
-);
-insert into cl(cookie)values('rodrigo');
-select * from cl;
-delimiter //
-create procedure ok
-(
-in entrada text
-)
-begin
-insert into cl(cookie)values(entrada);
-end//
-call ok('rodrigo');
-select * from cl;
-
 import mysql.connector
 from playwright.sync_api import sync_playwright
 
@@ -36,8 +18,8 @@ with sync_playwright() as p:
     conexao = mysql.connector.connect(
         host='localhost',
         user='vitor',
-        password='12345',
-        database='novo'
+        password='suasenha',
+        database='seubanco'
     )
 
     if conexao.is_connected():
@@ -58,3 +40,22 @@ with sync_playwright() as p:
 
     browser.close()
     print('Finalizado.')
+
+
+create table if not exists cl
+(
+id int primary key auto_increment,
+cookie text
+);
+insert into cl(cookie)values('rodrigo');
+select * from cl;
+delimiter //
+create procedure ok
+(
+in entrada text
+)
+begin
+insert into cl(cookie)values(entrada);
+end//
+call ok('rodrigo');
+select * from cl;
