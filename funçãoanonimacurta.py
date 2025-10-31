@@ -13,7 +13,8 @@ with sync_playwright() as p:
     time.sleep(10)  # espera carregar resultados
 
     # Pega o link do segundo produto que contém "Microsoft Xbox"
-    buscar = page.get_by_text('Microsoft Xbox', exact=False).nth(1).evaluate('a=>a.close("a").href')
+    buscar = page.get_by_text('Microsoft Xbox', exact=False).nth(1).evaluate("item => item.closest('a').href")
+
 
     # Vai para a página do produto
     page.goto(buscar)
