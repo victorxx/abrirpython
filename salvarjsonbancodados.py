@@ -25,3 +25,18 @@ with sync_playwright() as p:
         conexao.commit()
         conexao.close()
         print('cookies salvos com sucesso...')
+
+
+create table if not exists cookie(
+id int primary key auto_increment,
+cookies json
+);
+set sqL_safe_updates=0;
+delimiter //
+create procedure co(
+in p json
+)
+begin
+insert into cookie(cookies)values(p);
+end//
+select * from cookie;
