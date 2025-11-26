@@ -1,3 +1,10 @@
+create table if not exists dado(
+id int primary key auto_increment,
+titulo text,
+texto text
+);
+insert into dado(titulo,texto)values('victor','rica games');
+
 from flask import Flask,redirect,render_template,request
 import time
 import os
