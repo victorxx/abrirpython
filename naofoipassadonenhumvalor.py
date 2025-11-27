@@ -43,7 +43,7 @@ def postagem(ok):
        if unico:
            completo=unico[0]
            return completo
-    else:
+       else:
         return 'não temos nada aqui'
            
         
