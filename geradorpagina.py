@@ -1,217 +1,140 @@
-# ==============================
-#  GERADOR DE PÁGINA HTML
-#  Modelo automático igual ao que você usa
-# ==============================
+import os
 
-titulo = input("Digite o título do vídeo: ")
-video_url = input("Cole a URL embed do vídeo (ex: https://www.youtube.com/embed/XXXX): ")
+# Pergunta ao usuário se quer adicionar um link
+pergunta = input('QUER ADICIONAR UM LINK ? S OU N: ').lower()
+link = ''  # inicializa link vazio
 
-html = f"""
+if pergunta == 's':
+    link = input('Insira seu link aqui: ')
+
+titulo = input('Digite o titulo do video: ')
+video_url = input('Cole a URL embed do video (ex: https://www.youtube.com/embed/XXXX): ')
+
+# HTML do h2 só será incluído se link não for vazio
+h2_html = f'<h2><a href="{link}">CONFERIR ESSA OPORTUNIDADE NÃO PERCA</a></h2>' if link else ''
+
+html = f'''
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <title>{titulo}</title>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{titulo}</title>
-
     <style>
         body {{
-            background-color: black;
+            background-color: #000;
+            color: #fff;
             margin: 0;
             padding: 0;
-            color: white;
-            font-family: Arial, sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 25px;
+        }}
+
+        h1 {{
+            margin-top: 20px;
+            font-size: 2rem;
+        }}
+
+        h2 a {{
+            color: yellow;
+            text-decoration: none;
+        }}
+
+        h2 a:hover {{
+            text-decoration: underline;
+        }}
+
+        .propaganda2 {{
+            width: 90%;
+            max-width: 600px;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+        }}
+
+        .propaganda2 iframe {{
+            width: 100%;
+            height: 100%;
+            border: none;
         }}
 
         #video {{
             width: 90%;
             max-width: 600px;
-            padding: 20px;
-            background-color: red;
-            border-radius: 12px;
-            text-align: center;
+            margin-top: 40px;
         }}
 
         #video iframe {{
             width: 100%;
-            height: 250px;
-            border: none;
-            border-radius: 12px;
-        }}
-
-        #propaganda {{
-            width: 90%;
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }}
-
-        #propaganda iframe {{
-            width: 100%;
-            height: 200px;
-            border: none;
-            border-radius: 12px;
-        }}
-
-        #propaganda button {{
-            background-color: red;
-            color: white;
-            padding: 20px;
+            height: 320px;
             border-radius: 12px;
             border: none;
-            font-size: 20px;
-            cursor: pointer;
         }}
 
-        @media(max-width: 550px){{
+        @media(max-width: 550px) {{
             #video iframe {{
-                height: 180px;
+                height: 230px;
             }}
         }}
-    </style>
-</head>
 
+        .propaganda {{
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding-bottom: 40px;
+        }}
+
+        .propaganda button {{
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 18px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }}
+
+        .propaganda button:hover {{
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }}
+    </style>
+
+    <script>
+        function go(url) {{
+            window.location.href = url;
+        }}
+    </script>
+</head>
 <body>
 
-    <h1 style="color:white; text-align:center;">{titulo}</h1>
+    <h1>{titulo}</h1>
+    {h2_html}
 
-    <div id="propaganda">
-        <iframe 
-            loading="lazy"
-            src="https://produto-63y.pages.dev/oportunidade"
-            title="Anúncio Fixo Responsivo">
-        </iframe>
-
-        <button onclick="go('https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g')">
-            QUERO COMEÇAR NO AIRBNB
-        </button>
-
-        <button onclick="go('https://produto-63y.pages.dev/vps')">
-            VPS RÁPIDO E SEGURO PARA PROJETOS
-        </button>
-
-        <button onclick="go('https://sites.google.com/view/recomendao-do-dia/oportunidade?authuser=1')">
-            CONFIRA ESSA OPORTUNIDADE
-        </button>
-
-        <button onclick="go('https://vendaschamada.blogspot.com/')">
-            OPA! TEM OFERTA AQUI
-        </button>
+    <div class="propaganda2">
+        <iframe src="https://produto-63y.pages.dev/oportunidade" scrolling="no" frameborder="0"></iframe>
     </div>
 
     <div id="video">
         <iframe 
             src="{video_url}"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>
     </div>
 
-    <script>
-        function go(url){{
-            window.location.href = url;
-        }}
-    </script>
-
-</body>
-</html>
-"""
-
-with open("pagina_pronta.html", "w", encoding="utf-8") as file:
-    file.write(html)
-
-print("\n🔥 Página criada com sucesso: pagina_pronta.html")
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Video com Oportunidades</title>
-
-    <style>
-        body {
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            color: white;
-            font-family: Arial, sans-serif;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px;
-        }
-
-        /* Caixinha do vídeo */
-        #video {
-            width: 90%;
-            max-width: 600px;
-            padding: 20px;
-            background-color: red;
-            border-radius: 12px;
-            text-align: center;
-        }
-
-        #video iframe {
-            width: 100%;
-            height: 250px;
-            border: none;
-            border-radius: 12px;
-        }
-
-        /* Bloco de propaganda */
-        #propaganda {
-            width: 90%;
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        #propaganda iframe {
-            width: 100%;
-            height: 200px;
-            border: none;
-            border-radius: 12px;
-        }
-
-        #propaganda button {
-            background-color: red;
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        /* Responsividade */
-        @media(max-width: 550px){
-            #video iframe {
-                height: 180px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- PROPAGANDA TOPO -->
-    <div id="propaganda">
-        <iframe 
-            loading="lazy"
-            src="https://produto-63y.pages.dev/oportunidade"
-            title="Anúncio Fixo Responsivo">
-        </iframe>
+    <div class="propaganda">
 
         <button onclick="go('https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g')">
             QUERO COMEÇAR NO AIRBNB
@@ -228,22 +151,18 @@ print("\n🔥 Página criada com sucesso: pagina_pronta.html")
         <button onclick="go('https://vendaschamada.blogspot.com/')">
             OPA! TEM OFERTA AQUI
         </button>
-    </div>
 
-    <!-- VÍDEO PRINCIPAL -->
-    <div id="video">
-        <iframe 
-            src="https://www.youtube.com/embed/C6lS9w-XkFo?si=PpOT0m30R1mcAKhy"
-            allowfullscreen>
-        </iframe>
     </div>
-
-    <script>
-        function go(url){
-            window.location.href = url;
-        }
-    </script>
 
 </body>
 </html>
+'''
 
+desktop = os.path.join(os.path.expanduser('~'), 'Desktop')
+nome_arquivo = 'pagina.html'
+juntar = os.path.join(desktop, nome_arquivo)
+
+with open(juntar, 'w', encoding='utf-8') as file:
+    file.write(html)
+
+print('ok página criada com sucesso...')
