@@ -125,6 +125,7 @@ html = f'''
     <div class="propaganda2">
         <iframe src="https://produto-63y.pages.dev/oportunidade" scrolling="no" frameborder="0"></iframe>
     </div>
+    
 
     <div id="video">
         <iframe 
@@ -133,6 +134,10 @@ html = f'''
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>
+         <div class="propaganda">
+        <button onclick=go('https://produto-63y.pages.dev/facebookgrupo')">
+        GRUPO DE FACEBOOK</button>
+        </div>
     </div>
 
     <div class="propaganda">
