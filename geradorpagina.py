@@ -6,12 +6,13 @@ link = ''  # inicializa link vazio
 
 if pergunta == 's':
     link = input('Insira seu link aqui: ')
+    texto_link=''
 
 titulo = input('Digite o titulo do video: ')
 video_url = input('Cole a URL embed do video (ex: https://www.youtube.com/embed/XXXX): ')
 
 # HTML do h2 só será incluído se link não for vazio
-h2_html = f'<h2><a href="{link}">CONFERIR ESSA OPORTUNIDADE NÃO PERCA</a></h2>' if link else ''
+h2_html = f'<h2><a href="{link}">{texto_link}</a></h2>' if link else ''
 
 html = f'''
 <!DOCTYPE html>
