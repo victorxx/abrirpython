@@ -125,30 +125,8 @@ html = f'''
     <div class="propaganda2">
         <iframe src="https://produto-63y.pages.dev/oportunidade" scrolling="no" frameborder="0"></iframe>
     </div>
-    
-
-    <div id="video">
-        <iframe 
-            src="{video_url}"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-         <div class="propaganda">
-        <button onclick="go('https://produto-63y.pages.dev/facebookgrupo')">
-        GRUPO DE FACEBOOK</button>
-        
-        <button onclick="go('https://www.instagram.com/geocredibnkvitoria/')">CRÉDITO PESSOAL</button>
-
-        <button onclick="go('https://br.pinterest.com/internet6g/')">CONFIRA ESSA OPORTUNIDADE</button>
-
-        <button onclick="go('https://produto-63y.pages.dev/guarapari')">APARTAMENTO EM GUARAPARI TEMPORADA PRAIA DO MORRO</button>
-        
-        </div>
-        
-    </div>
-
-    <div class="propaganda">
+     
+        <div class="propaganda">
 
         <button onclick="go('https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g')">
             QUERO COMEÇAR NO AIRBNB
@@ -171,6 +149,28 @@ html = f'''
         </button>
 
     </div>
+    <div id="video">
+        <iframe 
+            src="{video_url}"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+         <div class="propaganda">
+        <button onclick="go('https://produto-63y.pages.dev/facebookgrupo')">
+        GRUPO DE FACEBOOK</button>
+        
+        <button onclick="go('https://www.instagram.com/geocredibnkvitoria/')">CRÉDITO PESSOAL</button>
+
+        <button onclick="go('https://br.pinterest.com/internet6g/')">CONFIRA ESSA OPORTUNIDADE</button>
+
+        <button onclick="go('https://produto-63y.pages.dev/guarapari')">APARTAMENTO EM GUARAPARI TEMPORADA PRAIA DO MORRO</button>
+        
+        </div>
+        
+    </div>
+
+
 
 </body>
 </html>
