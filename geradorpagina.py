@@ -153,6 +153,10 @@ html = f'''
             OPA! TEM OFERTA AQUI
         </button>
 
+        <button onclick="go('https://recomendadodia23.blogspot.com/')">
+        OPAAAAAAA VAMOS CONFERIR ESSAS OFERTAS?
+        </button>
+
     </div>
 
 </body>
