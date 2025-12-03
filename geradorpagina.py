@@ -1,14 +1,14 @@
 import os
 
 # Pergunta ao usuário se quer adicionar um link
-pergunta = input('QUER ADICIONAR UM LINK ? S OU N: ').lower()
+pergunta = input('QUER ADICIONAR UM LINK ? S OU N:\n ').lower()
 link = ''  # inicializa link vazio
 
 if pergunta == 's':
-    link = input('Insira seu link aqui: ')
-    texto_link=input('digite aqui texto do link')
+    link = input('Insira seu link aqui: \n')
+    texto_link=input('digite aqui texto do link \n')
 
-titulo = input('Digite o titulo do video: ')
+titulo = input('Digite o titulo do video:\n ')
 video_url = input('Cole a URL embed do video (ex: https://www.youtube.com/embed/XXXX): ')
 
 # HTML do h2 só será incluído se link não for vazio
@@ -169,6 +169,9 @@ html = f'''
         </div>
         
     </div>
+
+
+
 </body>
 </html>
 '''
