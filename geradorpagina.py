@@ -6,7 +6,7 @@ link = ''  # inicializa link vazio
 
 if pergunta == 's':
     link = input('Insira seu link aqui: ')
-    texto_link=''
+    texto_link=input('digite aqui texto do link')
 
 titulo = input('Digite o titulo do video: ')
 video_url = input('Cole a URL embed do video (ex: https://www.youtube.com/embed/XXXX): ')
