@@ -169,9 +169,6 @@ html = f'''
         </div>
         
     </div>
-
-
-
 </body>
 </html>
 '''
