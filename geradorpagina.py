@@ -135,9 +135,17 @@ html = f'''
             allowfullscreen>
         </iframe>
          <div class="propaganda">
-        <button onclick=go('https://produto-63y.pages.dev/facebookgrupo')">
+        <button onclick="go('https://produto-63y.pages.dev/facebookgrupo')">
         GRUPO DE FACEBOOK</button>
+        
+        <button onclick="go('https://www.instagram.com/geocredibnkvitoria/')">CRÉDITO PESSOAL</button>
+
+        <button onclick="go('https://br.pinterest.com/internet6g/')">CONFIRA ESSA OPORTUNIDADE</button>
+
+        <button onclick="go('https://produto-63y.pages.dev/guarapari')">APARTAMENTO EM GUARAPARI TEMPORADA PRAIA DO MORRO</button>
+        
         </div>
+        
     </div>
 
     <div class="propaganda">
