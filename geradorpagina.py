@@ -125,6 +125,13 @@ html = f'''
     <div class="propaganda2">
         <iframe src="https://produto-63y.pages.dev/oportunidade" scrolling="no" frameborder="0"></iframe>
     </div>
+    
+        <button onlick="go('https://fbs.partners?ibl=837120&ibp=33393839')">
+        💹 Comece no Mercado Forex Hoje! 💹
+        </button>
+        <button onclick="go('https://br.pinterest.com/pin/546835579793959220')">
+        🚘 Proteja seu carro hoje mesmo! 🚘
+        </button>
      
         <div class="propaganda">
 
@@ -159,6 +166,10 @@ html = f'''
          <div class="propaganda">
         <button onclick="go('https://produto-63y.pages.dev/facebookgrupo')">
         GRUPO DE FACEBOOK</button>
+         
+        <button  onclick="go('https://produto-63y.pages.dev/pixelart')">
+        🎨 Curso de Pixel Art – Comece Hoje! 🎨
+        </button>
         
         <button onclick="go('https://www.instagram.com/geocredibnkvitoria/')">CRÉDITO PESSOAL</button>
 
