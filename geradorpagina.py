@@ -125,13 +125,14 @@ html = f'''
     <div class="propaganda2">
         <iframe src="https://produto-63y.pages.dev/oportunidade" scrolling="no" frameborder="0"></iframe>
     </div>
-    
+        <div class="propaganda">
         <button onlick="go('https://fbs.partners?ibl=837120&ibp=33393839')">
         💹 Comece no Mercado Forex Hoje! 💹
         </button>
         <button onclick="go('https://br.pinterest.com/pin/546835579793959220')">
         🚘 Proteja seu carro hoje mesmo! 🚘
         </button>
+        </div>
      
         <div class="propaganda">
 
