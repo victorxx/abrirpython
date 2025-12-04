@@ -1,0 +1,51 @@
+import os 
+
+entrada=input('digite a primeira informacao')
+entrada2=input('digite a segunda informacao')
+entrada3=input('digite a terceira informacao')
+
+
+html = f'''''
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body{{
+                background-color: black;
+            }}
+            #exemplo{{
+                display: flex;
+                flex-wrap: wrap;
+                width:300px;
+                position: absolute;
+                left: 40%;
+                bottom:60%;
+                gap:30px 5px;
+            }}
+            #exemplo div{{
+                flex: 1 1 auto;
+                width:100px;
+                height: 50px;
+                text-align: center;
+                border-radius: 12px;
+                background-color: red;
+            }}
+        </style>
+    </head>
+    <body>
+        <div id="exemplo">
+            <div>{entrada}</div>
+            <div>{entrada2}</div>
+            <div>{entrada3}</div>
+        </div>
+
+    </body>
+</html>
+'''
+desktop=os.path.join(os.path.expanduser('~'),'Desktop')
+nome_arqivo='arquivossss.html'
+juntar=os.path.join(desktop,nome_arqivo)
+with open(juntar,'w') as file:
+    file.write(html)
+
+print('arquivo escrito com sucesso....')
