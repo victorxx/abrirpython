@@ -3,10 +3,11 @@ import os
 # Pergunta ao usuário se quer adicionar um link
 pergunta = input('QUER ADICIONAR UM LINK ? S OU N:\n ').lower()
 link = ''  # inicializa link vazio
+texto_link = ''  # inicializa texto do link vazio
 
 if pergunta == 's':
     link = input('Insira seu link aqui: \n')
-    texto_link=input('digite aqui texto do link \n')
+    texto_link = input('Digite aqui texto do link \n')
 
 titulo = input('Digite o titulo do video:\n ')
 video_url = input('Cole a URL embed do video (ex: https://www.youtube.com/embed/XXXX): ')
@@ -125,38 +126,34 @@ html = f'''
     <div class="propaganda2">
         <iframe src="https://produto-63y.pages.dev/oportunidade" scrolling="no" frameborder="0"></iframe>
     </div>
-        <div class="propaganda">
-        <button onlick="go('https://fbs.partners?ibl=837120&ibp=33393839')">
+
+    <div class="propaganda">
+        <button onclick="go('https://fbs.partners?ibl=837120&ibp=33393839')">
         💹 Comece no Mercado Forex Hoje! 💹
         </button>
         <button onclick="go('https://br.pinterest.com/pin/546835579793959220')">
         🚘 Proteja seu carro hoje mesmo! 🚘
         </button>
-        </div>
+    </div>
      
-        <div class="propaganda">
-
+    <div class="propaganda">
         <button onclick="go('https://www.airbnb.com.br/r/saibvictore?s=6&t=061n0g')">
             QUERO COMEÇAR NO AIRBNB
         </button>
-
         <button onclick="go('https://produto-63y.pages.dev/vps')">
             VPS RÁPIDO E SEGURO PARA PROJETOS
         </button>
-
         <button onclick="go('https://sites.google.com/view/recomendao-do-dia/oportunidade?authuser=1')">
             CONFIRA ESSA OPORTUNIDADE
         </button>
-
         <button onclick="go('https://vendaschamada.blogspot.com/')">
             OPA! TEM OFERTA AQUI
         </button>
-
         <button onclick="go('https://recomendadodia23.blogspot.com/')">
-        OPAAAAAAA VAMOS CONFERIR ESSAS OFERTAS?
+            OPAAAAAAA VAMOS CONFERIR ESSAS OFERTAS?
         </button>
-
     </div>
+
     <div id="video">
         <iframe 
             src="{video_url}"
@@ -164,25 +161,24 @@ html = f'''
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>
-         <div class="propaganda">
-        <button onclick="go('https://produto-63y.pages.dev/facebookgrupo')">
-        GRUPO DE FACEBOOK</button>
-         
-        <button  onclick="go('https://produto-63y.pages.dev/pixelart')">
-        🎨 Curso de Pixel Art – Comece Hoje! 🎨
-        </button>
-        
-        <button onclick="go('https://www.instagram.com/geocredibnkvitoria/')">CRÉDITO PESSOAL</button>
-
-        <button onclick="go('https://br.pinterest.com/internet6g/')">CONFIRA ESSA OPORTUNIDADE</button>
-
-        <button onclick="go('https://produto-63y.pages.dev/guarapari')">APARTAMENTO EM GUARAPARI TEMPORADA PRAIA DO MORRO</button>
-        
+        <div class="propaganda">
+            <button onclick="go('https://produto-63y.pages.dev/facebookgrupo')">
+                GRUPO DE FACEBOOK
+            </button>
+            <button onclick="go('https://produto-63y.pages.dev/pixelart')">
+                🎨 Curso de Pixel Art – Comece Hoje! 🎨
+            </button>
+            <button onclick="go('https://www.instagram.com/geocredibnkvitoria/')">
+                CRÉDITO PESSOAL
+            </button>
+            <button onclick="go('https://br.pinterest.com/internet6g/')">
+                CONFIRA ESSA OPORTUNIDADE
+            </button>
+            <button onclick="go('https://produto-63y.pages.dev/guarapari')">
+                APARTAMENTO EM GUARAPARI TEMPORADA PRAIA DO MORRO
+            </button>
         </div>
-        
     </div>
-
-
 
 </body>
 </html>
