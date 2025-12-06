@@ -1,0 +1,53 @@
+from playwright.sync_api import sync_playwright
+import time
+
+
+
+
+
+with sync_playwright() as p:
+    browser=p.chromium.launch(headless=False)
+    page=browser.new_page()
+    page.goto('file:///C:/Users/vitor/Desktop/pagina.html')
+    page.wait_for_load_state('load')
+    primeiro=page.check('input[value="pro"]')
+    time.sleep(30)
+    print('marcado...')
+    browser.close()
+
+  <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Teste</title>
+</head>
+<body>
+
+<h2>Escolha seu plano:</h2>
+
+<form id="form-planos">
+
+    <label>
+        <input type="radio" name="plano" value="basico" id="plano-basico">
+        Plano Básico
+    </label>
+    <br>
+
+    <label>
+        <input type="radio" name="plano" value="pro" id="plano-pro">
+        Plano PRO
+    </label>
+    <br>
+
+    <label>
+        <input type="radio" name="plano" value="premium" id="plano-premium">
+        Plano Premium
+    </label>
+    <br><br>
+
+    <button type="submit" id="btn-enviar">Enviar</button>
+
+</form>
+
+</body>
+</html>
