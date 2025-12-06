@@ -1,0 +1,27 @@
+import os
+from bs4 import BeautifulSoup
+
+# Caminho do arquivo HTML no Desktop
+desktop = os.path.join(os.path.expanduser('~'), 'Desktop')
+arquivo_html = 'pagina.html'
+caminho = os.path.join(desktop, arquivo_html)
+
+# Abrindo o HTML
+with open(caminho, 'r', encoding='utf-8') as file:
+    conteudo = file.read()
+
+# Parse do HTML
+soup = BeautifulSoup(conteudo, 'html.parser')
+
+# Encontrar todas as tags <a>
+botoes = soup.find_all('a')
+quantidade = len(botoes)
+
+# Verifica se existe pelo menos 1 link
+if quantidade >= 1:
+    texto = botoes[0].get_text()     # Pega o texto do primeiro link
+    link = botoes[0].get('href')    # Pega o href do primeiro link
+    print("Texto do link:", texto)
+    print("URL do link:", link)
+else:
+    print("Não existem links no HTML.")
