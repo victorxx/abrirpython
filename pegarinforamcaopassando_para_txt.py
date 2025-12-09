@@ -28,3 +28,29 @@ with  sync_playwright() as p:
         file.write('\n')
     print('ok')
     browser.close()
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            table{
+                width:100%;
+                height: 250px;
+                top:30px;
+                
+            }
+           th{
+            width:50%;
+            height: 250px;
+            padding:20px;
+           }
+        </style>
+    </head>
+    <body>
+        <table id="novo" border='1'>
+            <tr>
+                <th>nome</th><th>idade</th>
+            </tr>
+        </table>
+    </body>
+</html>
