@@ -19,6 +19,7 @@ html = f'''
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <meta property="og:image" content="https://raw.githubusercontent.com/victorxx/imagem/refs/heads/main/roberto.png">
     <title>{titulo}</title>
     
     <meta charset="UTF-8">
