@@ -90,7 +90,7 @@ modelo = f'''
             {html_paragrafos}
         </div>
 
-        <div class="ad">
+        <div class="ad" style="scale:1.4;>
            🚗 Proteja seu carro agora!<br>
            Seguro Auto rápido, confiável e sob medida para você. Ligue já: (027) 99949-7001 e garanta tranquilidade no trânsito.
         </div>
