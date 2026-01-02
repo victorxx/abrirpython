@@ -1,5 +1,5 @@
 import os
-
+.
 # Pergunta ao usuário se quer adicionar um link
 pergunta = input('QUER ADICIONAR UM LINK ? S OU N:\n ').lower()
 link = ''  # inicializa link vazio
