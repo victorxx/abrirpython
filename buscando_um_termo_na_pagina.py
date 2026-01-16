@@ -14,7 +14,7 @@ with sync_playwright() as p:
     while True:
         if termo in page.content():
             print(f'Termo{termo} encontrado')
-            encontrou=False
+            encontrou=True
             browser.close()
             break
         page.mouse.wheel(0,1000)
